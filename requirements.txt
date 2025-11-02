@@ -1,5 +1,10 @@
 streamlit
-nltk
-numpy
 pandas
-requests
+numpy
+nltk
+scikit-learn
+xgboost
+matplotlib
+seaborn
+wordcloud
+plotly
