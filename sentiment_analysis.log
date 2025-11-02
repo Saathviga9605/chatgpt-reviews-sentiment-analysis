@@ -1,0 +1,320 @@
+2025-10-26 16:24:23,422 - INFO - NLTK resources initialized
+2025-10-26 16:24:23,912 - INFO - Dataset loaded successfully: 250 records
+2025-10-26 16:24:28,636 - INFO - Dataset prepared: 250 samples
+2025-10-26 16:24:28,638 - INFO - Label distribution:
+label
+0    97
+2    96
+1    57
+Name: count, dtype: int64
+2025-10-26 16:24:32,573 - ERROR - Error during model training: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "D:\CHATGPT_SENTIMENT_ANALYSIS\sentiment_analysis.py", line 266, in train_sentiment_model
+    training_args = TrainingArguments(
+        output_dir=Config.RESULTS_DIR,
+    ...<14 lines>...
+        fp16=torch.cuda.is_available(),
+    )
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-10-26 16:27:03,892 - INFO - Starting model training...
+2025-10-26 16:27:04,608 - ERROR - Error during model training: train_sentiment_model.<locals>.WeightedTrainer.compute_loss() got an unexpected keyword argument 'num_items_in_batch'
+Traceback (most recent call last):
+  File "D:\CHATGPT_SENTIMENT_ANALYSIS\sentiment_analysis.py", line 296, in train_sentiment_model
+    trainer.train()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\transformers\trainer.py", line 2325, in train
+    return inner_training_loop(
+        args=args,
+    ...<2 lines>...
+        ignore_keys_for_eval=ignore_keys_for_eval,
+    )
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\transformers\trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\transformers\trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+TypeError: train_sentiment_model.<locals>.WeightedTrainer.compute_loss() got an unexpected keyword argument 'num_items_in_batch'
+2025-10-26 16:29:05,381 - INFO - Starting model training...
+2025-10-26 16:31:52,024 - INFO - Model training completed
+2025-10-26 16:31:57,572 - INFO - Model Evaluation Results:
+2025-10-26 16:31:57,573 - INFO - Accuracy: 0.3158
+2025-10-26 16:31:57,573 - INFO - Precision: 0.1788
+2025-10-26 16:31:57,573 - INFO - Recall: 0.3158
+2025-10-26 16:31:57,574 - INFO - F1-Score: 0.2269
+2025-10-26 16:31:57,574 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.39      0.73      0.51        15
+     Neutral       0.10      0.11      0.11         9
+    Positive       0.00      0.00      0.00        14
+
+    accuracy                           0.32        38
+   macro avg       0.16      0.28      0.21        38
+weighted avg       0.18      0.32      0.23        38
+
+2025-10-26 16:38:57,868 - INFO - Model Evaluation Results:
+2025-10-26 16:38:57,869 - INFO - Accuracy: 0.3158
+2025-10-26 16:38:57,869 - INFO - Precision: 0.1788
+2025-10-26 16:38:57,869 - INFO - Recall: 0.3158
+2025-10-26 16:38:57,870 - INFO - F1-Score: 0.2269
+2025-10-26 16:38:57,870 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.39      0.73      0.51        15
+     Neutral       0.10      0.11      0.11         9
+    Positive       0.00      0.00      0.00        14
+
+    accuracy                           0.32        38
+   macro avg       0.16      0.28      0.21        38
+weighted avg       0.18      0.32      0.23        38
+
+2025-10-26 16:39:29,747 - INFO - Model Evaluation Results:
+2025-10-26 16:39:29,748 - INFO - Accuracy: 0.3158
+2025-10-26 16:39:29,748 - INFO - Precision: 0.1788
+2025-10-26 16:39:29,748 - INFO - Recall: 0.3158
+2025-10-26 16:39:29,749 - INFO - F1-Score: 0.2269
+2025-10-26 16:39:29,749 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.39      0.73      0.51        15
+     Neutral       0.10      0.11      0.11         9
+    Positive       0.00      0.00      0.00        14
+
+    accuracy                           0.32        38
+   macro avg       0.16      0.28      0.21        38
+weighted avg       0.18      0.32      0.23        38
+
+2025-10-26 16:39:42,630 - INFO - Model Evaluation Results:
+2025-10-26 16:39:42,630 - INFO - Accuracy: 0.3158
+2025-10-26 16:39:42,631 - INFO - Precision: 0.1788
+2025-10-26 16:39:42,631 - INFO - Recall: 0.3158
+2025-10-26 16:39:42,631 - INFO - F1-Score: 0.2269
+2025-10-26 16:39:42,632 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.39      0.73      0.51        15
+     Neutral       0.10      0.11      0.11         9
+    Positive       0.00      0.00      0.00        14
+
+    accuracy                           0.32        38
+   macro avg       0.16      0.28      0.21        38
+weighted avg       0.18      0.32      0.23        38
+
+2025-10-26 16:40:00,607 - INFO - Model Evaluation Results:
+2025-10-26 16:40:00,608 - INFO - Accuracy: 0.3158
+2025-10-26 16:40:00,608 - INFO - Precision: 0.1788
+2025-10-26 16:40:00,608 - INFO - Recall: 0.3158
+2025-10-26 16:40:00,609 - INFO - F1-Score: 0.2269
+2025-10-26 16:40:00,609 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.39      0.73      0.51        15
+     Neutral       0.10      0.11      0.11         9
+    Positive       0.00      0.00      0.00        14
+
+    accuracy                           0.32        38
+   macro avg       0.16      0.28      0.21        38
+weighted avg       0.18      0.32      0.23        38
+
+2025-10-26 16:40:00,707 - INFO - Model Evaluation Results:
+2025-10-26 16:40:00,707 - INFO - Accuracy: 0.3158
+2025-10-26 16:40:00,708 - INFO - Precision: 0.1788
+2025-10-26 16:40:00,708 - INFO - Recall: 0.3158
+2025-10-26 16:40:00,708 - INFO - F1-Score: 0.2269
+2025-10-26 16:40:00,709 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.39      0.73      0.51        15
+     Neutral       0.10      0.11      0.11         9
+    Positive       0.00      0.00      0.00        14
+
+    accuracy                           0.32        38
+   macro avg       0.16      0.28      0.21        38
+weighted avg       0.18      0.32      0.23        38
+
+2025-10-26 16:42:54,108 - INFO - Original label distribution:
+label
+0    97
+2    96
+1    57
+Name: count, dtype: int64
+2025-10-26 16:42:54,110 - INFO - Dataset prepared: 250 samples
+2025-10-26 16:42:54,112 - INFO - Balanced label distribution:
+label
+0    97
+2    96
+1    57
+Name: count, dtype: int64
+2025-10-26 16:42:56,265 - INFO - Class weights: tensor([0.8004, 1.7834, 0.8004])
+2025-10-26 16:42:56,975 - INFO - Starting model training...
+2025-10-26 16:46:29,459 - INFO - Model training completed
+2025-10-26 16:46:35,837 - INFO - Model Evaluation Results:
+2025-10-26 16:46:35,837 - INFO - Accuracy: 0.3400
+2025-10-26 16:46:35,838 - INFO - Precision: 0.3893
+2025-10-26 16:46:35,838 - INFO - Recall: 0.3400
+2025-10-26 16:46:35,838 - INFO - F1-Score: 0.3053
+2025-10-26 16:46:35,839 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:47:04,354 - INFO - Model Evaluation Results:
+2025-10-26 16:47:04,355 - INFO - Accuracy: 0.3400
+2025-10-26 16:47:04,355 - INFO - Precision: 0.3893
+2025-10-26 16:47:04,355 - INFO - Recall: 0.3400
+2025-10-26 16:47:04,356 - INFO - F1-Score: 0.3053
+2025-10-26 16:47:04,356 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:50:27,833 - INFO - Model Evaluation Results:
+2025-10-26 16:50:27,833 - INFO - Accuracy: 0.3400
+2025-10-26 16:50:27,834 - INFO - Precision: 0.3893
+2025-10-26 16:50:27,834 - INFO - Recall: 0.3400
+2025-10-26 16:50:27,835 - INFO - F1-Score: 0.3053
+2025-10-26 16:50:27,835 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:50:28,256 - INFO - Model Evaluation Results:
+2025-10-26 16:50:28,256 - INFO - Accuracy: 0.3400
+2025-10-26 16:50:28,256 - INFO - Precision: 0.3893
+2025-10-26 16:50:28,257 - INFO - Recall: 0.3400
+2025-10-26 16:50:28,257 - INFO - F1-Score: 0.3053
+2025-10-26 16:50:28,257 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:50:42,673 - INFO - Model Evaluation Results:
+2025-10-26 16:50:42,673 - INFO - Accuracy: 0.3400
+2025-10-26 16:50:42,674 - INFO - Precision: 0.3893
+2025-10-26 16:50:42,674 - INFO - Recall: 0.3400
+2025-10-26 16:50:42,674 - INFO - F1-Score: 0.3053
+2025-10-26 16:50:42,675 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:50:43,097 - INFO - Model Evaluation Results:
+2025-10-26 16:50:43,098 - INFO - Accuracy: 0.3400
+2025-10-26 16:50:43,098 - INFO - Precision: 0.3893
+2025-10-26 16:50:43,098 - INFO - Recall: 0.3400
+2025-10-26 16:50:43,099 - INFO - F1-Score: 0.3053
+2025-10-26 16:50:43,099 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:52:03,450 - INFO - Model Evaluation Results:
+2025-10-26 16:52:03,450 - INFO - Accuracy: 0.3400
+2025-10-26 16:52:03,451 - INFO - Precision: 0.3893
+2025-10-26 16:52:03,451 - INFO - Recall: 0.3400
+2025-10-26 16:52:03,451 - INFO - F1-Score: 0.3053
+2025-10-26 16:52:03,452 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.58      0.45        19
+     Neutral       0.25      0.33      0.29        12
+    Positive       0.50      0.11      0.17        19
+
+    accuracy                           0.34        50
+   macro avg       0.37      0.34      0.30        50
+weighted avg       0.39      0.34      0.31        50
+
+2025-10-26 16:56:24,241 - INFO - Dataset loaded successfully: 250 records
+2025-10-26 16:56:24,369 - INFO - Original distribution:
+label
+0    97
+2    96
+1    57
+Name: count, dtype: int64
+2025-10-26 16:56:24,427 - INFO - Balanced dataset: 270 samples
+2025-10-26 16:56:24,428 - INFO - New distribution:
+label
+0    97
+2    96
+1    77
+Name: count, dtype: int64
+2025-10-26 16:56:26,325 - INFO - Class weights: tensor([0.8659, 1.3817, 0.8659])
+2025-10-26 16:56:26,922 - INFO - Starting BERT training...
+2025-10-26 16:58:39,841 - INFO - BERT training completed
+2025-10-26 16:58:45,141 - INFO - BERT Model - Accuracy: 0.3529, F1: 0.2568
+2025-10-26 17:04:31,729 - INFO - NLTK resources initialized
+2025-10-26 17:04:31,850 - INFO - Dataset loaded: 250 records
+2025-10-26 17:04:31,970 - INFO - Preprocessed dataset: 250 samples
+2025-10-26 17:04:31,972 - INFO - Sentiment distribution:
+sentiment
+Negative    97
+Positive    96
+Neutral     57
+Name: count, dtype: int64
+2025-10-26 17:04:32,031 - INFO - Training set: 200, Test set: 50
+2025-10-26 17:04:32,031 - INFO - Training ensemble model...
+2025-10-26 17:04:33,274 - INFO - Model Performance:
+2025-10-26 17:04:33,275 - INFO - Accuracy: 0.3800
+2025-10-26 17:04:33,275 - INFO - Precision: 0.3720
+2025-10-26 17:04:33,275 - INFO - Recall: 0.3800
+2025-10-26 17:04:33,276 - INFO - F1-Score: 0.3661
+2025-10-26 17:04:33,276 - INFO - ROC-AUC: 0.5370
+2025-10-26 17:04:33,277 - INFO - 
+              precision    recall  f1-score   support
+
+    Negative       0.37      0.37      0.37        19
+     Neutral       0.33      0.17      0.22        12
+    Positive       0.40      0.53      0.45        19
+
+    accuracy                           0.38        50
+   macro avg       0.37      0.35      0.35        50
+weighted avg       0.37      0.38      0.37        50
+
