@@ -317,4 +317,3 @@ Name: count, dtype: int64
     accuracy                           0.38        50
    macro avg       0.37      0.35      0.35        50
 weighted avg       0.37      0.38      0.37        50
-
